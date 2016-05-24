@@ -1,0 +1,17 @@
+
+for var in `ls`
+do
+	
+	if ( test  $var != 'ls')
+	then
+	test -x $var
+	if [ $? -eq 0 ]
+	then
+		
+		mkdir executables | exit mv '$@' &> /dev/null
+		mv $var $(pwd)/executables/$var  &> /dev/null
+		echo "$var has been moved"
+	fi
+	
+	fi
+done

@@ -1,0 +1,15 @@
+mkdir  linux-files | exit mv '$@'
+for file in ls linux* 
+do
+	if (test $file != "ls" )
+	then
+		name=$(basename $file)
+		mv $file $(pwd)/linux-files/$name
+		if   test $? -eq 0 
+		then
+		echo "$file has been moved"
+		fi
+	fi
+	
+done
+

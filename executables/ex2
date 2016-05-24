@@ -1,0 +1,6 @@
+for file in $(pwd)/*
+do
+	echo $file |tr '[:upper:]' '[:lower:]'  
+	
+done
+

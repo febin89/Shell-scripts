@@ -1,0 +1,4 @@
+for file in $HOME/lin-class/git*
+do  
+	echo $file
+done
